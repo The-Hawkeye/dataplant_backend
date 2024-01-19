@@ -124,7 +124,9 @@ exports.deleteScheduleById = async(req,res)=>{
 
     const data   = await schedule.findByIdAndDelete(id);
 
-    res.json({message:"Deleted Successfully"})
+    const ans  = await schedule.find();
+
+    res.json(ans);
 
     }catch(err)
     {
