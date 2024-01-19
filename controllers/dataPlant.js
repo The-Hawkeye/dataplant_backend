@@ -155,7 +155,7 @@ exports.createNewSchedule = async(req,res)=>{
 
     }catch(err)
     {
-        res.json(err);
+        res.status(403).json(err);
     }
 
 
