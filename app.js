@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
 
 const dotenv = require("dotenv");
 
@@ -12,6 +13,8 @@ const middlewares = require("./middlewares/validateId");
 
 const app = express();
 app.use(express.json());
+app.use(cors());
+app.options("*",cors());
 
 // const PORT = 8000;
 
